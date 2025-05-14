@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "46c4ca7c-00b6-49ff-a961-07a75bd5a7be",
+		"name": "API Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2668240",
+		"_collection_link": "https://crimson-capsule-297930.postman.co/workspace/GLOBO~58d48bb4-36d5-4a9a-bf9a-86e001fd20fe/collection/2668240-46c4ca7c-00b6-49ff-a961-07a75bd5a7be?action=share&source=collection_link&creator=2668240"
+	},
+	"item": [
+		{
+			"name": "stack",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "Hello Template",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Fulano da Silva\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base-url}}/stack/v1/hello-template",
+									"host": [
+										"{{base-url}}"
+									],
+									"path": [
+										"stack",
+										"v1",
+										"hello-template"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Metrics Grafana",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{x-api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/metrics",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health UP",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": \"UP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/health",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

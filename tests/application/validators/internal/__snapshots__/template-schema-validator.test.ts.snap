@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`template schema deve validar os campos incorretos 1`] = `
+[
+  {
+    "context": {
+      "key": "nome",
+      "label": "nome",
+      "value": true,
+    },
+    "message": ""nome" deve ser um texto",
+    "path": [
+      "nome",
+    ],
+    "type": "string.base",
+  },
+]
+`;
+
+exports[`template schema deve validar os campos obrigatórios 1`] = `
+[
+  {
+    "context": {
+      "key": "nome",
+      "label": "nome",
+    },
+    "message": ""nome" é um campo obrigatório",
+    "path": [
+      "nome",
+    ],
+    "type": "any.required",
+  },
+]
+`;
+
+exports[`template schema deve validar um caso de sucesso 1`] = `
+{
+  "nome": "Ciclano",
+}
+`;

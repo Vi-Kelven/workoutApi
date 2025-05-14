@@ -1,0 +1,7 @@
+healthcheck:
+  path: /stack/admin/health
+  method: GET
+  status: 200
+  match: ^{"status":"UP"
+  allowed_failures: 3
+

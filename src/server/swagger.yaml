@@ -1,0 +1,55 @@
+openapi: 3.0.0
+info:
+  title: Template API
+  version: 1.0.0
+  description: Descrição de Template API
+servers:
+  - url: http://localhost:3000
+paths:
+  /stack/v1/hello-template:
+    post:
+      summary: Template POST
+      description: Endpoint template a ser utilizado como referencia.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  example: "Fulano"
+      responses:
+        '200':
+          description: Template de resposta de sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello Fulano da Silva! Value by repository!"
+        '422':
+          description: Erro de pré-condição falhada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  date:
+                    type: string
+                    example: "2024-01-01 12:12:12"
+                  status:
+                    type: string
+                    example: "BUSINESS_ERROR"
+                  message:
+                    type: string
+                    example: "Precondition Failed"
+                  details:
+                    type: array
+                    items:
+                      type: string
+                    example:
+                      - "nome deve ser um texto"

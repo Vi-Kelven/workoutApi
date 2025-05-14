@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "commonjs",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "incremental": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    "outDir": "build",
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "~/*": ["./src/*"],
+      "~tests/*": ["./tests/*"]
+    },
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*", "tests/**/*"]
+}

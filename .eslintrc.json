@@ -1,0 +1,26 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "plugins": ["prettier"],
+    "extends": ["plugin:prettier/recommended", "prettier/standard"],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "prettier/prettier": ["error", {"singleQuote": true, "semi": false, "printWidth": 120}],
+        "eqeqeq": ["error", "always"],
+        "complexity": ["error", 18],
+        "indent": ["error", 4],
+        "no-unused-expressions": "off",
+        "no-var": "off",
+        "padded-blocks": "off"
+    }
+}
