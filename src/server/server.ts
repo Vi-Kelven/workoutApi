@@ -20,7 +20,7 @@ import YAML from 'yamljs'
 dotenv.config({ encoding: 'utf8' })
 
 // BANNER DA API
-const banner = '<EDIT> NOME DA API'
+const banner = 'Workout API'
 figlet(banner, (err, data) => {
   if (err) {
     console.error('Something went wrong...')

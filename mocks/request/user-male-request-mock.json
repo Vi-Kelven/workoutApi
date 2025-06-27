@@ -1,0 +1,23 @@
+{
+    "nome": "Victor Kelven",
+    "idade": 28,
+    "sexo": "Masculino",
+    "objetivo": "Hipertrofia",
+    "nivel": "Avancado",
+    "experiente": true,
+    "localidade": "Casa; Academia",
+    "equipamentos": null,
+    "tempo": 2,
+    "frequencia": 3,
+    "restrição": "Lombar;Joelho;braco direito curto",
+    "duracaoTreino": 90,
+    "cardio": true,
+    "funcional": true
+}
+
+{"muscles": ["Peito, Ombro, Triceps"]}
+
+1 musculo
+2 limitacao
+3 objetivo
+4 nivel

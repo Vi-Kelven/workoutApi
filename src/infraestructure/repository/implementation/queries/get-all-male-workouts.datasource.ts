@@ -1,7 +1,8 @@
-import postgreeKnexDatabase from '../../../database/knex-postgree-database'
+import knex from 'knex'
+import { Exercises } from '~/domain/entity/modal/exercises'
 
 const query = async () => {
-  const result = await postgreeKnexDatabase('exercises')
+  const result: Exercises[] = await knex('exercises')
     .select()
 
   return result
