@@ -1,4 +1,4 @@
-import { Exercises } from "~/domain/entity/modal/exercises";
+import { Exercises } from "../../../domain/entity/modal/exercises";
 import IExerciseRepository from "../interfaces/i-exercise-repository";
 import dbGetAllMaleWorkouts from "./queries/get-all-male-workouts.datasource"
 

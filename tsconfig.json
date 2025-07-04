@@ -20,11 +20,7 @@
     "skipLibCheck": true,
 
     "outDir": "build",
-    "typeRoots": ["node_modules/@types"],
-    "paths": {
-      "~/*": ["./src/*"],
-      "~tests/*": ["./tests/*"]
-    },
+    "typeRoots": ["node_modules/@types"]
   },
   "exclude": ["node_modules"],
   "include": ["src/**/*", "tests/**/*"]

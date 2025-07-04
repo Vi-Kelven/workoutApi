@@ -4,7 +4,7 @@
   "description": "Modulo de precificação da GLOBO",
   "main": "index.js",
   "scripts": {
-    "start": "node build/src/server/server.js",
+    "start": "tsc && node build/src/server/server.js",
     "start:dev": "export $(cat .env.dev | xargs) && nodemon --exec \"npm start\"",
     "start:hlg": "export $(cat .env.hlg | xargs) && nodemon --exec \"npm start\"",
     "start:prd": "export $(cat .env.prd | xargs) && nodemon --exec \"npm start\"",
@@ -44,6 +44,7 @@
     "jest-summary-reporter": "^0.0.2",
     "joi": "^17.13.3",
     "knex": "^3.1.0",
+    "mysql": "^2.18.1",
     "pg": "^8.16.0",
     "prom-client": "^11.5.3",
     "prometheus-api-metrics": "^2.2.7",

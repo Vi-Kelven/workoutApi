@@ -1,12 +1,12 @@
 import { sex } from "../enum/sex-enum"
 
 export type CommonFieldsDto = {
-    Nome: string,
-    Idade: number,
-    Sexo: sex,
-    Objetivo: string,
-    Nivel: string,
-    Experiente: boolean, //Já treinou antes?
+    nome: string,
+    idade: number,
+    sexo: sex,
+    objetivo: string,
+    nivel: string,
+    experiente: boolean, //Já treinou antes?
     localidade: string, //Local de Treino
     equipamentos: string, //Equipamentos disponíveis
     tempo: number, //Tempo disponível por dia (min)
@@ -19,6 +19,6 @@ export type CommonFieldsDto = {
 }
 
 export type WorkoutRequestDto = {
-    usuario: CommonFieldsDto,
-    muscles: string[]   
+    user: CommonFieldsDto,
+    muscle: string[]   
 }

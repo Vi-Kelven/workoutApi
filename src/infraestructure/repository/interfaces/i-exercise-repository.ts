@@ -1,4 +1,4 @@
-import { Exercises } from "~/domain/entity/modal/exercises"
+import { Exercises } from "../../../domain/entity/modal/exercises"
 
 interface IExerciseRepository {
     getAllExecises(): Promise<Exercises[]>

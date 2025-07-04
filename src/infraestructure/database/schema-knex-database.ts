@@ -1,5 +1,6 @@
 import postgreeKnexDatabase from "./schema-knex-postgree-database"
+import mysqlKnexDatabase from "./schema-knex-mysql-database"
 
-const knex = postgreeKnexDatabase
+const knex = mysqlKnexDatabase
 
 export = knex

@@ -1,5 +1,5 @@
-import { Exercises } from "~/domain/entity/modal/exercises"
-import ExerciseRepository from "~/infraestructure/repository/implementation/exercise.repository"
+import { Exercises } from "./../../../domain/entity/modal/exercises"
+import ExerciseRepository from "./../../../infraestructure/repository/implementation/exercise.repository"
 
 const exerciseRepository = new ExerciseRepository()
 
@@ -14,7 +14,8 @@ const loadExercises = async () => {
 
         exercises = listExercises
         lastTimeGet = new Date()
-    }   catch(_){
+    }catch(_)   {
         console.log("Erro ao carregar os execicios")
     }
 }
+
