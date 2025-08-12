@@ -1,4 +1,4 @@
-import knex from '../../../database/schema-knex-database'
+import knex from '../../../../database/schema-knex-database'
 
 const query = async (): Promise<any> => {
   const result: any[] = await knex
