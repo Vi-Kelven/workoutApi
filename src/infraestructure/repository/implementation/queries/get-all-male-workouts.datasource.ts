@@ -1,8 +1,8 @@
 import knex from '../../../database/schema-knex-database'
-import { Exercises } from '../../../../domain/entity/modal/exercises'
+import { ExercisesModal } from '../../../../domain/entity/modal/exercises-modal'
 
 const query = async () => {
-  const result: Exercises[] = await knex('exercicio')
+  const result: ExercisesModal[] = await knex('exercicio')
     .select('*')
 
   return result

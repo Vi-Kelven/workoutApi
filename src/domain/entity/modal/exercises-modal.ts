@@ -1,4 +1,4 @@
-export type Exercises = {
+export type ExercisesModal = {
     id?: string;
     nome?: string;
     equipamento_fk_id?: string;

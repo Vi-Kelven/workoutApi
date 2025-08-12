@@ -1,3 +1,5 @@
+import { WorkoutRequestDto } from "../../../entity/dto/common-fields-requests-dto";
+
 export interface IMaleWorkoutService {
-    execute(payload)
+    execute(payload: WorkoutRequestDto)
 }

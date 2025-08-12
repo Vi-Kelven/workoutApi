@@ -1,9 +1,9 @@
-import { Exercises } from "./../../../domain/entity/modal/exercises"
+import { ExercisesModal } from "../../../domain/entity/modal/exercises-modal"
 import ExerciseRepository from "./../../../infraestructure/repository/implementation/exercise.repository"
 
 const exerciseRepository = new ExerciseRepository()
 
-let exercises: Exercises[]
+let exercises: ExercisesModal[]
 let lastTimeGet: Date
 
 const loadExercises = async () => {

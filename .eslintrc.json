@@ -21,6 +21,7 @@
         "indent": ["error", 4],
         "no-unused-expressions": "off",
         "no-var": "off",
-        "padded-blocks": "off"
+        "padded-blocks": "off",
+        "no-unused-vars": "off"
     }
 }

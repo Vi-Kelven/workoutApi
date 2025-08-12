@@ -1,9 +1,11 @@
-import { Exercises } from "../../../domain/entity/modal/exercises"
+import { ExercisesModal } from "../../../domain/entity/modal/exercises-modal"
 
 interface IExerciseRepository {
-    getAllExecises(): Promise<Exercises[]>
-    insertExercises(exercises: Exercises[])
-    updateExercisesById(exercises: Exercises[])
+    getAllExecises(): Promise<ExercisesModal[]>
+    insertExercises(exercises: ExercisesModal[])
+    updateExercisesById(exercises: ExercisesModal[])
+    getWorkoutsMuscles(): Promise<any[]>
+
 }
 
 export = IExerciseRepository

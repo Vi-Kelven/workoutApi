@@ -6,9 +6,10 @@ const stringUtil = new StringUtil()
 
 class UserClassification implements IUserClassification {
     userClassification(userDetail: CommonFieldsDto) {
-        const result: {nivel: string[], objetivo: string[]} = {
+        const result: {nivel: string[], objetivo: string[], localidade: string} = {
             nivel: ['INICIANTE', 'INTERMEDIARIO', 'AVANCADO'],
-            objetivo: []
+            objetivo: [],
+            localidade: userDetail.localidade
         }
 
         if(userDetail.nivel != "All"){

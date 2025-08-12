@@ -13,7 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: './tsconfig.json',
     tsconfigRootDir: __dirname
   },
   plugins: [
@@ -24,6 +23,13 @@ module.exports = {
     'no-var': 'off',
     'padded-blocks': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/restrict-template-expressions': 'off'
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', {
+      vars: 'all',
+      args: 'after-used',
+      ignoreRestSiblings: true,
+      varsIgnorePattern: '^_',
+      argsIgnorePattern: '^_'
+    }]
   }
 }

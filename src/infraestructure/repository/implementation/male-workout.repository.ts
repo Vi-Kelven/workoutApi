@@ -1,3 +1,5 @@
+import { CommonFieldsDto } from "../../../domain/entity/dto/common-fields-requests-dto";
+import { ExercisesModal } from "../../../domain/entity/modal/exercises-modal";
 import StringUtil from "../../util/string-util";
 import { IMaleWorkoutsRepository } from "../interfaces/i-male-workouts-repository";
 import dbGetAllMaleWorkouts from "./queries/get-all-male-workouts.datasource"
@@ -8,19 +10,27 @@ class MaleWorkoutRepository implements IMaleWorkoutsRepository{
     constructor(){}
     
     async getAllMaleWorkouts() {
-        return await dbGetAllMaleWorkouts();
+        return {... await dbGetAllMaleWorkouts(),
+            points: []
+            
+        };
     }
 
-    async getClassificationMaleWorkout(userDetail: {nivel: string[], objetivo: string[]}){
-        const exercises = await this.getAllMaleWorkouts()
+    async getClassificationMaleWorkout(userDetail: {nivel: string[], objetivo: string[], localidade: string}, workout?: ExercisesModal[]){
+        const exercises: ExercisesModal[] = workout ?? await this.getAllMaleWorkouts()
         const result: any = []
         for(const item of exercises){
+
             let points = 0
             if(item.nivel && userDetail.nivel.includes(stringUtil.limparTexto(item.nivel))){
                 points += 1000
             }
 
             if(item.objecto && userDetail.objetivo.includes(stringUtil.limparTexto(item.objecto))){
+                points += 1000
+            }
+
+            if(stringUtil.limparTexto(userDetail.localidade) === stringUtil.limparTexto(('Academia')) && item.caseiro){
                 points += 1000
             }
 
