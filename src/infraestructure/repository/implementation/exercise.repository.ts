@@ -1,13 +1,15 @@
 import { ExercisesModal } from "../../../domain/entity/modal/exercises-modal";
 import IExerciseRepository from "../interfaces/i-exercise-repository";
+
 import dbGetAllMaleWorkouts from "./queries/get-all-male-workouts.datasource"
 import dbGetWorkoutsMuscles from "./queries/get-workouts-muscles-join.datasource"
+import dbListExercises from "./queries/exercises/list_exercises.datasource"
 
 class ExerciseRepository implements IExerciseRepository {
     constructor(){}
 
     async getAllExecises(): Promise<ExercisesModal[]> {
-        return await dbGetAllMaleWorkouts()
+        return await dbListExercises()
     }
 
     insertExercises(exercises: ExercisesModal[]) {

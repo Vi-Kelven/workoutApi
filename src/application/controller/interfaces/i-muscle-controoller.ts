@@ -1,5 +1,5 @@
-interface IMuscleController {
+interface IExercisesController {
     execute(req: any, res: any): Promise<void>
 }
 
-export = IMuscleController
+export = IExercisesController
