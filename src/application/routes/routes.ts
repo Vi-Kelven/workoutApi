@@ -2,6 +2,8 @@ import { Router } from 'express';
 import { post as helloTemplate } from './stack/hello-template/post'
 import { post as maleWorkout } from './v1/generate-workout/male/post'
 
+import { post as login } from './auth/post-login'
+
 import { get as listMuscles } from './v1/muscle/get'
 import { get as listExercises } from './v1/exercises/get'
 
@@ -24,6 +26,9 @@ const ehw = (requestHandler: (req: any, res: any) => Promise<void>) => {
 
 routes.post('/stack/v1/hello-template', ehw(helloTemplate));
 routes.post('/generate/male/workout', ehw(maleWorkout))
+
+//Autenticacao
+routes.post('/login', ehw(login))
 
 routes.get('/muscles', ehw(listMuscles))
 routes.get('/exercises', ehw(listExercises))
