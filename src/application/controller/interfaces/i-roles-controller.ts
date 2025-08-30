@@ -1,3 +1,5 @@
+// ✅ Interface do controller para padronizar o método execute
 export interface IRolesController {
-    execute(req, res): Promise<void>
+  // Use tipagem do Express se quiser (Request, Response). "any" também funciona.
+  execute(req: any, res: any): Promise<void>;
 }

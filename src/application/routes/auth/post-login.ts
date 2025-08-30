@@ -1,8 +1,10 @@
-import RolesControllerFactory from "../../controller/factories/roles-controller-factory"
+// ✅ Handler da rota POST /api/login — apenas direciona p/ o controller
+import { Request, Response } from "express";
+import RolesControllerFactory from "../../controller/factories/roles-controller-factory";
 
-const post = async (req, res) => {
-  const controller = RolesControllerFactory.build()
-  await controller.execute(req, res)
-}
-
-export { post }
+export const post = async (req: Request, res: Response): Promise<void> => {
+  // Cria o controller via factory (mantendo seu padrão)
+  const controller = RolesControllerFactory.build();
+  // Executa a ação do login
+  await controller.execute(req, res);
+};
