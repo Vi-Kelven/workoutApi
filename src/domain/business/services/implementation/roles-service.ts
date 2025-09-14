@@ -1,4 +1,7 @@
+import { Params as DeleteParams } from "../../../../infraestructure/repository/implementation/queries/roles/delete-account.datasource";
+import { Params as UpdateParams } from "../../../../infraestructure/repository/implementation/queries/roles/update-account.datasource";
 import { IRolesRepository } from "../../../../infraestructure/repository/interfaces/i-roles.repository";
+import { RolesDto } from "../../../entity/dto/roles-dto";
 import { IRolesService } from "../interfaces/i-roles-service";
 
 const bcrypt = require("bcryptjs");
@@ -54,6 +57,35 @@ class RolesService implements IRolesService {
         }
     }
 
+    async createAccount(payload: RolesDto){        
+        const result = this.rolesRepository.insertNewMember(payload)
+        return result
+    }
+
+    async updateAccount(payload: RolesDto){
+        if(!payload.id || payload.id == undefined)
+            return
+
+        const updatePayload: UpdateParams = {
+            id: payload.id,
+            ...payload
+        }
+
+        const result = this.rolesRepository.updateAccount(updatePayload)
+        return result
+    }
+
+    async deleteAccount(payload: RolesDto){
+        if(payload.id || payload.id == undefined)
+            return 
+
+        const deletePayload: DeleteParams = {
+            id: payload.id
+        }
+
+        const result = this.rolesRepository.deleteAccount(deletePayload)
+        return result
+    }
 }
 
 export = RolesService;

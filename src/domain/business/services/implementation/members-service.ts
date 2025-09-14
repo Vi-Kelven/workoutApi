@@ -4,6 +4,9 @@ class MembersService implements IMembersInterface{
     listMembers(){
         return 1
     }
+
+    insertNewMember(){}
+
 }
 
 export = MembersService
