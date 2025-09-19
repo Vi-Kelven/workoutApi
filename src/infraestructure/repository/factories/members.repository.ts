@@ -1,4 +1,4 @@
-import MembersRepository from "../implementation/users.repository";
+import MembersRepository from "../implementation/members.repository";
 import { IMembersRepository } from "../interfaces/i-members-repository";
 
 class MembersRepositoryFactory {
