@@ -1,5 +1,5 @@
 import { IExercisesService } from "../interfaces/i-exercises-service";
-import ExercisesRepositoryFactory from "../../../../infraestructure/repository/factories/exercise.repository";
+import ExercisesRepositoryFactory from "../../../../infraestructure/repository/factories/exercise-repository-factory";
 import ExerciseService from "../implementation/exercises-service";
 
 class ExerciseServiceFactory {
