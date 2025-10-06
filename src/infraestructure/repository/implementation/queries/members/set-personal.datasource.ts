@@ -1,4 +1,4 @@
-import knex from '../../../../database/schema-knex-database'
+import knexDatabase from '../../../../database/schema-knex-database'
 
 export type alunoId = number
 export type personalId = number
@@ -13,7 +13,7 @@ const query = async (alunoId: alunoId, personalId: personalId) => {
         personal_id: personalId
     }
 
-  const result = await knex('perfis')
+  const result = await knexDatabase('perfis')
     .where(condition)
     .update(update)
 

@@ -1,5 +1,5 @@
-import knex from "knex"
 import { rolesEnum } from "../../../../../domain/entity/enum/roles-enum"
+import knexDatabase from "../../../../database/schema-knex-database"
 
 
 export type Params = {
@@ -17,7 +17,7 @@ const deleteAccountDatasource = async (params: Params) => {
         id: params.id
     }
 
-    const result = await knex('perfis')
+    const result = await knexDatabase('perfis')
         .delete()
         .where(condition)
 

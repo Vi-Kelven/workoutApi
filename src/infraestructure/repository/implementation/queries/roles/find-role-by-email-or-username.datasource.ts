@@ -1,4 +1,4 @@
-import knex from '../../../../database/schema-knex-database'
+import knexDatabase from '../../../../database/schema-knex-database'
 
 const findRoleByEmailORUsername = async (email: string, username: string) => {
     const emailCondition = {
@@ -9,7 +9,7 @@ const findRoleByEmailORUsername = async (email: string, username: string) => {
         username: username
     }
 
-  const result: any[] = await knex('perfis')
+  const result: any[] = await knexDatabase('perfis')
     .select('*')
     .where(emailCondition)
     .orWhere(userNameCondition)

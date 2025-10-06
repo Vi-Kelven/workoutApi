@@ -1,4 +1,4 @@
-import knex from '../../../../database/schema-knex-database'
+import knexDatabase from '../../../../database/schema-knex-database'
 
 const query = async () => {
     const condition = {
@@ -6,7 +6,7 @@ const query = async () => {
         personal_id: null
     }
 
-  const result = await knex('perfis')
+  const result = await knexDatabase('perfis')
     .select('*')
     .where(condition)
 

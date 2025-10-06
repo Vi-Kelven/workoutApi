@@ -1,11 +1,11 @@
-import knex from '../../../../database/schema-knex-database'
+import knexDatabase from '../../../../database/schema-knex-database'
 
 const query = async () => {
     const condition = {
         tipo_usuario: 'aluno'
     }
 
-  const result = await knex('perfis')
+  const result = await knexDatabase('perfis')
     .select('*')
     .where(condition)
 

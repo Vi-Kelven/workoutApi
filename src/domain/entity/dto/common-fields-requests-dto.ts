@@ -1,6 +1,7 @@
 import { sex } from "../enum/sex-enum"
 
 export type CommonFieldsDto = {
+    id?: string,
     nome: string,
     idade: number,
     sexo: sex,

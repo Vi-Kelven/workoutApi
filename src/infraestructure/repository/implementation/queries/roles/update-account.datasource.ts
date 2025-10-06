@@ -1,5 +1,5 @@
-import knex from "knex"
 import { rolesEnum } from "../../../../../domain/entity/enum/roles-enum"
+import knexDatabase from "../../../../database/schema-knex-database";
 
 const crypto = require("crypto");
 const bcrypt = require("bcrypt");
@@ -20,7 +20,7 @@ const updateAccountDatasource = async (params: Params) => {
         id: params.id
     }
 
-    const result = await knex('perfis')
+    const result = await knexDatabase('perfis')
         .update(params)
         .where(condition)
 

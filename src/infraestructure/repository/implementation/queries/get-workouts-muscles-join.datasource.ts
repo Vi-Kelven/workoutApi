@@ -1,7 +1,7 @@
-import knex from '../../../database/schema-knex-database'
+import knexDatabase from '../../../database/schema-knex-database'
 
 const query = async (): Promise<any> => {
-  const result: any[] = await knex
+  const result: any[] = await knexDatabase
     .select(
       'exer_musc.id as relatable_id', 
       'exer_musc.exercicio_fk_id as relatable_exercicio_fk_id', 

@@ -2,7 +2,7 @@ import ExerciseServiceFactory from "../../../domain/business/services/factories/
 import ExercisesController from "../implementation/exercises-controller";
 import IExercisesController from "../interfaces/i-exercises-controller";
 
-class MuscleControllerFactory {
+class ExercisesControllerFactory {
     public static create(): IExercisesController {
         const service = ExerciseServiceFactory.build()
         const controller = new ExercisesController(service)
@@ -10,4 +10,4 @@ class MuscleControllerFactory {
     }
 }
 
-export = MuscleControllerFactory
+export = ExercisesControllerFactory
